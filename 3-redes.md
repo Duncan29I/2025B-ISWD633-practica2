@@ -12,13 +12,14 @@ Las redes son un componente fundamental que permite la comunicación entre conte
 ```
 docker network create <nombre red> -d bridge
 ```
+PS C:\Users\Italo> docker network create --driver bridge mi-red-bridge
 
 ### Crear un contenedor vinculado a una red
 
 ```
 docker run -d --name <nombre contenedor> --network <nombre red> <nombre imagen>
 ```
-
+PS C:\Users\Italo> docker network create --driver bridge mi-red-bridge
 ### Para saber a qué red está conectado un contenedor
 
 ```
@@ -28,6 +29,7 @@ docker inspect <nombre contenedor>
 ```
 docker network inspect <nombre red> 
 ```
+PS C:\Users\Italo> docker inspect mi-contenedor-red
 
 ### Vincular contenedor a una red
 ```
